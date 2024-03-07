@@ -1,0 +1,64 @@
+<!-- <p>take-order works!</p> -->
+<div class="container">
+    <div class="row">
+    
+    <div class="col-2">
+        <h3>Order Page</h3>
+        <form #orderForm="ngForm" (ngSubmit)="takeOrder(orderForm)">
+
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Name</label>
+                <input type="text" 
+                class="form-control" 
+                id="name"
+                name="name"
+                #name="ngModel"
+                ngModel
+                >
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Phone</label>
+              <input type="number"
+              
+               class="form-control" 
+              id="phone" 
+              name="phone"
+              pattern="[0-9]{10}"
+              #phone="ngModel"
+              ngModel
+              >
+            </div>
+           
+          </form>
+          </div>
+       
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+        <div class="col-8">
+            <h3>Menu</h3>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Sl no</th>
+                    <th scope="col">Food</th>
+                    <th scope="col"></th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <!-- inside result there is data where all the data is stored -->
+                         <!-- <td>{{r.pName}}</td>
+                         <td>{{r._id}}</td> -->
+                         
+                         <td><button class="btn btn-primary" type="button">Update</button></td>
+                         <td><button class="btn btn-secondary" >+</button></td>
+                    </tr>
+                </tbody>
+               </table>
+               <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</div>

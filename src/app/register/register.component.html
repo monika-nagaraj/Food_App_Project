@@ -1,0 +1,66 @@
+<!-- <p>register works!</p> -->
+<div class="container">
+    <div class="row">
+    
+    <div class="col-6">
+        <h3>Registration Page</h3>
+        <form #regForm="ngForm" (ngSubmit)="regUser(regForm)">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text"
+                 class="form-control" 
+                 placeholder="Enter your name"
+                id="name" 
+               name="name"
+               #name="ngModel"
+                ngModel
+                >
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email"
+               class="form-control" 
+               placeholder="Enter your Email"
+              id="email" 
+              name="email"
+              #email="ngModel"
+              ngModel
+              >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" 
+              class="form-control" 
+              placeholder="Enter your password"
+              id="password"
+              name="password"
+              #password="ngModel"
+              ngModel
+              >
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Role</label>
+                <select id="inputState" 
+                class="form-select"
+                placeholder="Choose role"
+                id="role"
+                name="role"
+                role="ngModel"
+                ngModel
+                >
+                <option selected>Choole Role</option>
+                  <option [ngValue]="admin">Admin</option>
+                  <option [ngValue]="manager">Manager</option>
+                  <option [ngValue]="staff">Staff</option>
+                </select>
+              </div>
+              <br>
+
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          
+        </div>
+    </div>
+</div>
